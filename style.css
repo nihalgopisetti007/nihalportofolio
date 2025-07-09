@@ -1,85 +1,79 @@
+/* RESET + BASE */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  background-color: #0d0d0d;
+  background-color: #0a0a0a;
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  padding: 20px;
+  overflow: hidden;
 }
 
-header {
+/* HOME PAGE POPUP STYLING */
+.home-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* GOLD & BLACK POPUP */
+.popup {
   text-align: center;
-  padding: 30px 0;
-  background-color: #1a1a1a;
-  border-bottom: 2px solid #ffd700;
+  padding: 40px 30px;
+  border: 2px solid #ffd700;
+  border-radius: 15px;
+  background-color: #111111;
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+  z-index: 10;
 }
 
-header h1 {
-  font-size: 2.5rem;
-  color: #ffd700;
-}
-
-nav ul {
-  margin-top: 10px;
-  list-style: none;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav a {
+.popup h1 {
   color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color: #ffd700;
-}
-
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #1a1a1a;
-  border-radius: 10px;
-}
-
-section {
-  margin-bottom: 40px;
-}
-
-section h2 {
   font-size: 1.8rem;
-  color: #ffd700;
   margin-bottom: 10px;
 }
 
-section p {
-  font-size: 1.1rem;
-  color: #e0e0e0;
-}
-
-a {
+.popup h2 {
+  font-size: 3.5rem;
   color: #ffd700;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.enter-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #ffd700;
+  color: #0a0a0a;
+  font-weight: bold;
   text-decoration: none;
+  font-size: 1rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
 }
 
-a:hover {
-  text-decoration: underline;
+.enter-btn:hover {
+  background-color: #e6c200;
 }
 
-footer {
-  text-align: center;
-  margin-top: 60px;
-  color: #666666;
-  font-size: 0.9rem;
+/* FADE-IN BLACK OVERLAY */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 2.5s ease-in-out;
+}
+
+/* FADE-OUT EFFECT */
+body.loaded #overlay {
+  opacity: 0;
+  pointer-events: none;
 }
