@@ -4,60 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   background-color: #0a0a0a;
   color: #ffffff;
   font-family: 'Segoe UI', sans-serif;
-  overflow: hidden;
-}
-
-/* HOME PAGE WRAPPER */
-.home-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* GOLD & BLACK POPUP */
-.popup {
-  text-align: center;
-  padding: 40px 30px;
-  border: 2px solid #ffd700;
-  border-radius: 15px;
-  background-color: #111111;
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
-  z-index: 10;
-}
-
-.popup h1 {
-  color: #ffffff;
-  font-size: 1.8rem;
-  margin-bottom: 10px;
-}
-
-.popup h2 {
-  font-size: 3.5rem;
-  color: #ffd700;
-  margin-bottom: 25px;
-  letter-spacing: 1px;
-}
-
-.enter-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #ffd700;
-  color: #0a0a0a;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1rem;
-  border-radius: 6px;
-  transition: background 0.3s ease;
-}
-
-.enter-btn:hover {
-  background-color: #e6c200;
+  overflow-x: hidden;
 }
 
 /* FADE-IN BLACK OVERLAY */
@@ -72,148 +23,87 @@ body {
   opacity: 1;
   transition: opacity 2.5s ease-in-out;
 }
-
-/* FADE-OUT EFFECT */
 body.loaded #overlay {
   opacity: 0;
   pointer-events: none;
 }
 
-/* NAVIGATION BAR */
-header {
-  background-color: #0f0f0f;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 1px solid #ffd700;
-}
-
-header h1 {
-  color: #ffd700;
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-nav ul {
-  list-style: none;
-  margin-top: 10px;
-  padding: 0;
-}
-
-nav ul li {
-  display: inline-block;
-  margin: 0 15px;
-}
-
-nav a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a.active,
-nav a:hover {
-  color: #ffd700;
-}
-
-/* PAGE CONTENT */
-main {
-  max-width: 850px;
-  margin: 60px auto;
-  padding: 30px;
-  background-color: #111111;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.1);
-}
-
-section h2 {
-  font-size: 2rem;
-  color: #ffd700;
-  margin-bottom: 15px;
-}
-
-section p {
-  font-size: 1.1rem;
-  color: #ddd;
-  line-height: 1.6;
-}
-
-.highlight {
-  color: #ffd700;
-  font-weight: 600;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  margin: 40px 0 20px;
-  color: #777;
-  font-size: 0.9rem;
-}
-
-/* ========================= */
-/* HERO BACKGROUND IMAGE */
-/* ========================= */
+/* HERO IMAGE BACKGROUND */
 .hero-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 70vw;
-  height: 70vh;
-  transform: translate(-50%, -50%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: url('https://i.pinimg.com/originals/4b/b9/b1/4bb9b10bda60ce92694682b905fe1310.jpg') no-repeat center center;
   background-size: cover;
-  opacity: 0.15;
-  z-index: 5;
+  opacity: 0.1;
+  z-index: 1;
+  pointer-events: none;
 }
 
-/* HERO HEADER WITH TEXT */
+/* HERO TEXT LAYOUT */
 .hero-header {
   position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   text-align: center;
-  z-index: 10;
+  padding: 20px;
 }
 
 .hero-header h1 {
-  font-size: 4rem;
+  font-size: 3.8rem;
   color: #ffd700;
   margin-bottom: 0.5rem;
 }
 
 .hero-tagline {
-  font-size: 1.5rem;
-  color: #ddd;
+  font-size: 1.4rem;
+  color: #dddddd;
   margin-bottom: 2rem;
 }
 
+/* NAV LINKS */
+.hero-nav {
+  display: flex;
+  gap: 20px;
+}
 .hero-nav a {
-  margin: 0 20px;
-  font-size: 1.1rem;
   color: #fff;
   text-decoration: none;
-  border: 2px solid transparent;
-  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border: 2px solid #ffd700;
+  border-radius: 6px;
   transition: all 0.3s ease;
 }
-
 .hero-nav a:hover {
-  color: #0a0a0a;
   background-color: #ffd700;
-  border-color: #ffd700;
-  border-radius: 4px;
+  color: #0a0a0a;
 }
 
+/* FOOTER */
 .hero-footer {
   position: absolute;
   bottom: 20px;
   width: 100%;
   text-align: center;
-  color: #555;
+  color: #777;
   font-size: 0.9rem;
   z-index: 10;
+}
+
+/* Responsive for Desktop */
+@media screen and (min-width: 768px) {
+  .hero-header h1 {
+    font-size: 4.5rem;
+  }
+  .hero-tagline {
+    font-size: 1.6rem;
+  }
 }
