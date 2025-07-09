@@ -90,23 +90,6 @@ body.loaded #overlay {
   background-color: #e6c200;
 }
 
-/* HERO IMAGE BACKGROUND (optional, currently commented) */
-/*
-.hero-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 70vw;
-  height: 70vh;
-  transform: translate(-50%, -50%);
-  background: url('https://i.pinimg.com/originals/4b/b9/b1/4bb9b10bda60ce92694682b905fe1310.jpg') no-repeat center center;
-  background-size: cover;
-  opacity: 0.15;
-  z-index: 5;
-  pointer-events: none;
-}
-*/
-
 /* FOOTER */
 .hero-footer {
   position: absolute;
