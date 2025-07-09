@@ -150,3 +150,70 @@ footer {
   color: #777;
   font-size: 0.9rem;
 }
+
+/* ========================= */
+/* HERO BACKGROUND IMAGE */
+/* ========================= */
+.hero-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70vw;
+  height: 70vh;
+  transform: translate(-50%, -50%);
+  background: url('https://i.pinimg.com/originals/4b/b9/b1/4bb9b10bda60ce92694682b905fe1310.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.15;
+  z-index: 5;
+}
+
+/* HERO HEADER WITH TEXT */
+.hero-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  z-index: 10;
+}
+
+.hero-header h1 {
+  font-size: 4rem;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 1.5rem;
+  color: #ddd;
+  margin-bottom: 2rem;
+}
+
+.hero-nav a {
+  margin: 0 20px;
+  font-size: 1.1rem;
+  color: #fff;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+
+.hero-nav a:hover {
+  color: #0a0a0a;
+  background-color: #ffd700;
+  border-color: #ffd700;
+  border-radius: 4px;
+}
+
+.hero-footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: #555;
+  font-size: 0.9rem;
+  z-index: 10;
+}
