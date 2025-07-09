@@ -42,6 +42,7 @@ body.loaded #overlay {
   height: 100vh;
   text-align: center;
   padding: 20px;
+  gap: 30px; /* Added to create space between name and buttons */
 }
 
 .hero-header h1 {
@@ -52,17 +53,14 @@ body.loaded #overlay {
   text-transform: uppercase;
 }
 
-.hero-tagline {
-  font-size: 1.4rem;
-  color: #dddddd;
-  margin-bottom: 2rem;
-}
-
-/* NAVIGATION */
+/* NAVIGATION BUTTONS */
 .hero-nav {
   display: flex;
   gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 .hero-nav a {
   color: #fff;
   text-decoration: none;
@@ -73,13 +71,14 @@ body.loaded #overlay {
   border-radius: 6px;
   transition: all 0.3s ease;
 }
+
 .hero-nav a:hover,
 .hero-nav a.active {
   background-color: #ffd700;
   color: #0a0a0a;
 }
 
-/* MAIN CONTENT AREA */
+/* MAIN CONTENT AREA (for About and Contact) */
 main {
   max-width: 850px;
   margin: 60px auto;
@@ -117,12 +116,13 @@ section p {
   z-index: 10;
 }
 
-/* Responsive for Desktop */
+/* RESPONSIVE DESIGN */
 @media screen and (min-width: 768px) {
   .hero-header h1 {
     font-size: 4.5rem;
   }
-  .hero-tagline {
-    font-size: 1.6rem;
+
+  .hero-nav a {
+    font-size: 1.2rem;
   }
 }
