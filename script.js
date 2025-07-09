@@ -1,27 +1,18 @@
-// 🎨 Stylized console banner
+
 console.log(
-  "%cWelcome to Nihal Gopisetti's Portfolio 👨‍💻",
-  "color: #ff4e50; font-size: 20px; font-weight: bold; background: #f9d423; padding: 6px;"
+  "%cWelcome to Nihal Gopisetti’s Pro Portfolio 🧠",
+  "color: #FFD700; font-size: 16px; font-weight: bold; background: #0d0d0d; padding: 6px;"
 );
 
-// 📘 About Nihal
-const nihalInfo = {
+const nihal = {
   name: "Nihal Gopisetti",
   university: "Anurag University",
-  course: "B.Tech in Artificial Intelligence",
-  email: "nihalg2837@gmail.com",
-  phone: "+91 7620149671",
-  message: "I build creative and technical projects!"
+  degree: "B.Tech in Artificial Intelligence",
+  skills: ["AI", "Data Analysis", "Automation", "Creative Projects"],
+  contact: {
+    email: "nihalg2837@gmail.com",
+    phone: "+91 7620149671"
+  }
 };
 
-console.log("👤 Name:", nihalInfo.name);
-console.log("🏫 University:", nihalInfo.university);
-console.log("🎓 Course:", nihalInfo.course);
-console.log("📧 Email:", nihalInfo.email);
-console.log("📱 Phone:", nihalInfo.phone);
-console.log("💬 Message:", nihalInfo.message);
-
-// ✨ Optional: Alert the user (can remove if not needed)
-window.addEventListener("load", () => {
-  alert("Hey there! Welcome to Nihal Gopisetti's portfolio🚀");
-});
+console.table(nihal);
